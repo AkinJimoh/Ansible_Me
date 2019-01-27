@@ -1,4 +1,9 @@
 ---
+ - name: install java 8
+   yum:
+      name: "{{ java }}"
+      state: present
+
  - name: download jenkins repo for REDHAT distributions
    get_url:
       url: "{{ url }}"
